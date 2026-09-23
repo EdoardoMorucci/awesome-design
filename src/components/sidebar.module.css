@@ -1,0 +1,253 @@
+.sidebar {
+  position: fixed;
+  inset: 0 auto 0 0;
+  width: var(--sidebar-w);
+  display: flex;
+  flex-direction: column;
+  background: var(--panel);
+  border-right: 1px solid var(--line);
+  z-index: 40;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 18px 18px 14px;
+  text-decoration: none;
+}
+
+.brand strong {
+  display: block;
+  font-size: 14px;
+  letter-spacing: -0.01em;
+}
+
+.brand small {
+  display: block;
+  color: var(--fg-3);
+  font-size: 12px;
+}
+
+.brandMark {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 9px;
+  background: var(--fg);
+  color: var(--bg);
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: -0.04em;
+}
+
+.search {
+  position: relative;
+  margin: 0 14px 10px;
+  display: flex;
+  align-items: center;
+}
+
+.search svg {
+  position: absolute;
+  left: 10px;
+  width: 15px;
+  height: 15px;
+  color: var(--fg-3);
+  pointer-events: none;
+}
+
+.search input {
+  width: 100%;
+  height: 36px;
+  padding: 0 34px 0 32px;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  background: var(--panel-2);
+  color: var(--fg);
+  font: inherit;
+  outline: none;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.search input:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 20%, transparent);
+  background: var(--panel);
+}
+
+.search kbd {
+  position: absolute;
+  right: 8px;
+  font-size: 11px;
+  color: var(--fg-3);
+  border: 1px solid var(--line-2);
+  border-radius: 4px;
+  padding: 0 5px;
+  line-height: 16px;
+}
+
+.nav {
+  flex: 1;
+  overflow-y: auto;
+  padding: 4px 10px 16px;
+  scrollbar-width: thin;
+  scrollbar-color: var(--line-2) transparent;
+}
+
+.group {
+  margin-top: 10px;
+}
+
+.groupHead {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 8px;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  color: var(--fg-3);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.groupHead span {
+  flex: 1;
+}
+
+.groupHead em {
+  font-style: normal;
+  font-weight: 500;
+}
+
+.groupHead svg {
+  width: 12px;
+  height: 12px;
+  transition: transform 0.15s;
+}
+
+.groupHead .chevClosed {
+  transform: rotate(-90deg);
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 8px;
+  border-radius: 7px;
+  color: var(--fg-2);
+  text-decoration: none;
+  font-weight: 450;
+  transition: background 0.12s, color 0.12s;
+}
+
+.item:hover {
+  background: var(--panel-2);
+  color: var(--fg);
+}
+
+.active,
+.active:hover {
+  background: color-mix(in srgb, var(--fg) 8%, transparent);
+  color: var(--fg);
+  font-weight: 600;
+}
+
+.dot {
+  flex: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  outline: 1px solid color-mix(in srgb, var(--fg) 14%, transparent);
+}
+
+.gridIcon {
+  width: 14px;
+  height: 14px;
+  background:
+    linear-gradient(currentColor 0 0) 0 0 / 6px 6px no-repeat,
+    linear-gradient(currentColor 0 0) 100% 0 / 6px 6px no-repeat,
+    linear-gradient(currentColor 0 0) 0 100% / 6px 6px no-repeat,
+    linear-gradient(currentColor 0 0) 100% 100% / 6px 6px no-repeat;
+  border-radius: 2px;
+  opacity: 0.8;
+}
+
+.empty {
+  padding: 12px 8px;
+  color: var(--fg-3);
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 12px 18px;
+  border-top: 1px solid var(--line);
+  font-size: 12px;
+  color: var(--fg-3);
+}
+
+.footer a {
+  color: var(--fg-2);
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: var(--fg);
+}
+
+.burger,
+.scrim {
+  display: none;
+}
+
+@media (max-width: 860px) {
+  .sidebar {
+    transform: translateX(-100%);
+    transition: transform 0.2s ease;
+    box-shadow: var(--shadow);
+  }
+
+  .open {
+    transform: none;
+  }
+
+  .scrim {
+    display: block;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+    z-index: 30;
+  }
+
+  .burger {
+    display: grid;
+    gap: 4px;
+    place-content: center;
+    position: fixed;
+    top: 12px;
+    left: 12px;
+    z-index: 50;
+    width: 38px;
+    height: 38px;
+    border-radius: 9px;
+    border: 1px solid var(--line);
+    background: var(--panel);
+    cursor: pointer;
+  }
+
+  .burger span {
+    width: 16px;
+    height: 1.5px;
+    background: var(--fg);
+  }
+}

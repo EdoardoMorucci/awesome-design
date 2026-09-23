@@ -3,17 +3,26 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "designs": "node scripts/fetch-designs.mjs",
+    "predev": "node scripts/fetch-designs.mjs --if-missing",
     "dev": "next dev",
+    "prebuild": "node scripts/fetch-designs.mjs",
     "build": "next build",
     "start": "next start",
     "lint": "eslint"
   },
   "dependencies": {
+    "js-yaml": "^5.4.2",
     "next": "16.3.6",
     "react": "19.2.8",
-    "react-dom": "19.2.8"
+    "react-dom": "19.2.8",
+    "react-markdown": "^10.1.0",
+    "remark-gfm": "^4.0.1",
+    "server-only": "^0.0.1",
+    "tar": "^7.5.22"
   },
   "devDependencies": {
+    "@types/js-yaml": "^4.0.9",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
