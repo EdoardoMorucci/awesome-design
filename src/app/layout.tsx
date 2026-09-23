@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Awesome DESIGN.md — browse design systems",
-    template: "%s · Awesome DESIGN.md",
+    default: "DESIGN.md Library — browse design systems",
+    template: "%s · DESIGN.md Library",
   },
   description:
     "Browse, preview and copy DESIGN.md files for AI agents — from VoltAgent/awesome-design-md.",

@@ -83,7 +83,7 @@ export function Sidebar({ designs, categories, repo, fetchedAt }: Props) {
             MD
           </span>
           <span>
-            <strong>Awesome DESIGN.md</strong>
+            <strong>DESIGN.md Library</strong>
             <small>{designs.length} design systems</small>
           </span>
         </Link>
