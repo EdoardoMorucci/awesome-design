@@ -79,17 +79,14 @@ export function Sidebar({ designs, categories, fetchedAt }: Props) {
       <aside className={`${s.sidebar} ${open ? s.open : ""}`}>
         <Link href="/" className={s.brand}>
           <span className={s.brandMark} aria-hidden>
-            {/* Same mark as app/icon.svg, minus the tile (brandMark draws it). */}
+            {/* Same mark and colours as app/icon.svg, minus the tile (brandMark draws it). */}
             <svg viewBox="0 0 32 32">
-              <rect x="6" y="4" width="20" height="22" rx="2" fill="currentColor" />
-              <rect x="8" y="4" width="2" height="22" fill="var(--fg)" />
-              <path d="M18 4h4v26l-2-2-2 2z" fill="var(--accent)" />
+              <rect x="6" y="4" width="20" height="22" rx="2" fill="#18181b" />
+              <rect x="8" y="4" width="2" height="22" fill="#fbfbfa" />
+              <path d="M18 4h4v26l-2-2-2 2z" fill="#10b981" />
             </svg>
           </span>
-          <span>
-            <strong>The Book</strong>
-            <small>{designs.length} design systems</small>
-          </span>
+          <strong>The Book</strong>
         </Link>
 
         <div className={s.search}>

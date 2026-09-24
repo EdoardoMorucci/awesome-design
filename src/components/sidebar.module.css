@@ -18,15 +18,8 @@
 }
 
 .brand strong {
-  display: block;
   font-size: 14px;
   letter-spacing: -0.01em;
-}
-
-.brand small {
-  display: block;
-  color: var(--fg-3);
-  font-size: 12px;
 }
 
 .brandMark {
@@ -35,8 +28,9 @@
   width: 34px;
   height: 34px;
   border-radius: 9px;
-  background: var(--fg);
-  color: var(--bg);
+  /* Fixed colours (not theme vars) so the mark always matches app/icon.svg. */
+  background: #fbfbfa;
+  box-shadow: inset 0 0 0 1px var(--line-2);
 }
 
 .brandMark svg {
