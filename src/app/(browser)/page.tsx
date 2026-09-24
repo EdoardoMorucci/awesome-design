@@ -4,7 +4,7 @@ import s from "./browser.module.css";
 
 export default function Home() {
   const designs = getDesigns();
-  const { categories, repo } = getMeta();
+  const { categories } = getMeta();
   const cards = designs.map((d) => ({
     slug: d.slug,
     name: d.name,
@@ -38,15 +38,11 @@ export default function Home() {
   return (
     <div className={s.page}>
       <header className={s.hero}>
-        <p className={s.kicker}>DESIGN.md library</p>
+        <p className={s.kicker}>The Book — every design system, before it ships</p>
         <h1>Design systems your AI agent can read.</h1>
         <p>
           {designs.length} DESIGN.md files extracted from real websites. Pick one, see it rendered as
-          a live site, then copy the markdown, tokens or specs straight into your project. Source:{" "}
-          <a href={`https://github.com/${repo}`} target="_blank" rel="noreferrer">
-            {repo}
-          </a>
-          .
+          a live site, then copy the markdown, tokens or specs straight into your project.
         </p>
       </header>
       <Gallery cards={cards} categories={categories} />

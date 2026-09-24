@@ -10,10 +10,9 @@ type Props = {
   spec: string;
   css: string;
   json: string;
-  githubUrl: string;
 };
 
-export function CopyMenu({ slug, markdown, spec, css, json, githubUrl }: Props) {
+export function CopyMenu({ slug, markdown, spec, css, json }: Props) {
   const [copied, copy] = useCopied();
   const [open, setOpen] = useState(false);
   const [flash, setFlash] = useState<string | null>(null);
@@ -86,10 +85,6 @@ export function CopyMenu({ slug, markdown, spec, css, json, githubUrl }: Props) 
           <a className={s.menuItem} href={`/raw/${slug}`} download="DESIGN.md">
             <span>Download DESIGN.md</span>
             <small>Save the file</small>
-          </a>
-          <a className={s.menuItem} href={githubUrl} target="_blank" rel="noreferrer">
-            <span>View on GitHub ↗</span>
-            <small>Source in awesome-design-md</small>
           </a>
         </div>
       )}

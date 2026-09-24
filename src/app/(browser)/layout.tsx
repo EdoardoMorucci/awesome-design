@@ -9,7 +9,6 @@ export default function BrowserLayout({ children }: LayoutProps<"/">) {
       <Sidebar
         designs={getSummaries()}
         categories={meta.categories}
-        repo={meta.repo}
         fetchedAt={meta.fetchedAt}
       />
       <main className={s.main}>{children}</main>

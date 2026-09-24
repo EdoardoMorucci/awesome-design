@@ -60,7 +60,6 @@ export default async function DesignPage({ params }: PageProps<"/design/[slug]">
               spec={design.body}
               css={toCssVariables(design)}
               json={toJson(design)}
-              githubUrl={design.githubUrl}
             />
           </div>
         }

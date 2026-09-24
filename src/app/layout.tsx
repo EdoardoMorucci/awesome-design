@@ -14,11 +14,11 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "DESIGN.md Library — browse design systems",
-    template: "%s · DESIGN.md Library",
+    default: "The Book — every design system, before it ships",
+    template: "%s · The Book",
   },
   description:
-    "Browse, preview and copy DESIGN.md files for AI agents — from VoltAgent/awesome-design-md.",
+    "Browse, preview and copy DESIGN.md files for AI agents.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

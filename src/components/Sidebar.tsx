@@ -9,11 +9,10 @@ import s from "./sidebar.module.css";
 type Props = {
   designs: DesignSummary[];
   categories: string[];
-  repo: string;
   fetchedAt: string;
 };
 
-export function Sidebar({ designs, categories, repo, fetchedAt }: Props) {
+export function Sidebar({ designs, categories, fetchedAt }: Props) {
   const pathname = usePathname();
   const [query, setQuery] = useState("");
   const [open, setOpen] = useState(false);
@@ -80,10 +79,10 @@ export function Sidebar({ designs, categories, repo, fetchedAt }: Props) {
       <aside className={`${s.sidebar} ${open ? s.open : ""}`}>
         <Link href="/" className={s.brand}>
           <span className={s.brandMark} aria-hidden>
-            MD
+            TB
           </span>
           <span>
-            <strong>DESIGN.md Library</strong>
+            <strong>The Book</strong>
             <small>{designs.length} design systems</small>
           </span>
         </Link>
@@ -151,9 +150,6 @@ export function Sidebar({ designs, categories, repo, fetchedAt }: Props) {
         </nav>
 
         <footer className={s.footer}>
-          <a href={`https://github.com/${repo}`} target="_blank" rel="noreferrer">
-            {repo} ↗
-          </a>
           <span>
             Synced{" "}
             {new Date(fetchedAt).toLocaleDateString("en-GB", {
