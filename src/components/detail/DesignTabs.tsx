@@ -25,6 +25,9 @@ export function DesignTabs(props: Record<Tab, ReactNode> & { header: ReactNode; 
   }, []);
 
   const select = (t: Tab) => {
+    // Panels share the window's scroll; start each tab from the top instead of
+    // inheriting the previous tab's offset.
+    window.scrollTo({ top: 0, behavior: "instant" });
     setTab(t);
     history.replaceState(null, "", t === "preview" ? window.location.pathname : `#${t}`);
   };
