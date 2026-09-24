@@ -79,7 +79,12 @@ export function Sidebar({ designs, categories, fetchedAt }: Props) {
       <aside className={`${s.sidebar} ${open ? s.open : ""}`}>
         <Link href="/" className={s.brand}>
           <span className={s.brandMark} aria-hidden>
-            TB
+            {/* Same mark as app/icon.svg, minus the tile (brandMark draws it). */}
+            <svg viewBox="0 0 32 32">
+              <rect x="8" y="6" width="16" height="20" rx="2" fill="currentColor" />
+              <rect x="10" y="6" width="2" height="20" fill="var(--fg)" />
+              <path d="M18 6h4v22l-2-2-2 2z" fill="var(--accent)" />
+            </svg>
           </span>
           <span>
             <strong>The Book</strong>
