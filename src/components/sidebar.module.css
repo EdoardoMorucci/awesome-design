@@ -200,6 +200,12 @@
   color: var(--fg);
 }
 
+/* Required attribution for the upstream DESIGN.md content; kept deliberately quiet. */
+.license {
+  font-size: 10px;
+  opacity: 0.6;
+}
+
 .burger,
 .scrim {
   display: none;

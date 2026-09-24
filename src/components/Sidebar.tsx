@@ -160,6 +160,7 @@ export function Sidebar({ designs, categories, fetchedAt }: Props) {
               year: "numeric",
             })}
           </span>
+          <small className={s.license}>MIT License · Copyright (c) 2026 VoltAgent</small>
         </footer>
       </aside>
     </>
