@@ -81,9 +81,9 @@ export function Sidebar({ designs, categories, fetchedAt }: Props) {
           <span className={s.brandMark} aria-hidden>
             {/* Same mark as app/icon.svg, minus the tile (brandMark draws it). */}
             <svg viewBox="0 0 32 32">
-              <rect x="8" y="6" width="16" height="20" rx="2" fill="currentColor" />
-              <rect x="10" y="6" width="2" height="20" fill="var(--fg)" />
-              <path d="M18 6h4v22l-2-2-2 2z" fill="var(--accent)" />
+              <rect x="6" y="4" width="20" height="22" rx="2" fill="currentColor" />
+              <rect x="8" y="4" width="2" height="22" fill="var(--fg)" />
+              <path d="M18 4h4v26l-2-2-2 2z" fill="var(--accent)" />
             </svg>
           </span>
           <span>
