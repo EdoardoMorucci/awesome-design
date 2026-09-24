@@ -205,6 +205,33 @@
   display: none;
 }
 
+/* Top-right of the home page. */
+.themeToggle {
+  position: fixed;
+  top: 16px;
+  right: 28px;
+  z-index: 50;
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  border: 1px solid var(--line-2);
+  background: var(--panel);
+  color: var(--fg);
+  cursor: pointer;
+  transition: background 0.12s;
+}
+
+.themeToggle:hover {
+  background: var(--panel-2);
+}
+
+.themeToggle svg {
+  width: 16px;
+  height: 16px;
+}
+
 @media (max-width: 860px) {
   .sidebar {
     transform: translateX(-100%);
@@ -238,6 +265,15 @@
     border: 1px solid var(--line);
     background: var(--panel);
     cursor: pointer;
+  }
+
+  .themeToggle {
+    top: 12px;
+    right: 12px;
+    width: 38px;
+    height: 38px;
+    border-radius: 9px;
+    border-color: var(--line);
   }
 
   .burger span {

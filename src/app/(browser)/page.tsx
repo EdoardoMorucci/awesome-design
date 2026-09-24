@@ -1,4 +1,5 @@
 import { Gallery } from "@/components/Gallery";
+import { ThemeToggle } from "@/components/ThemeToggle";
 import { getDesigns, getMeta } from "@/lib/designs";
 import s from "./browser.module.css";
 
@@ -37,6 +38,7 @@ export default function Home() {
 
   return (
     <div className={s.page}>
+      <ThemeToggle />
       <header className={s.hero}>
         <p className={s.kicker}>The Book — every design system, before it ships</p>
         <h1>Design systems your AI agent can read.</h1>

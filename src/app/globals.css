@@ -15,19 +15,18 @@
   color-scheme: light;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #0c0c0e;
-    --panel: #141417;
-    --panel-2: #1b1b1f;
-    --fg: #f4f4f5;
-    --fg-2: #b4b4bb;
-    --fg-3: #7c7c85;
-    --line: #26262b;
-    --line-2: #34343a;
-    --shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 8px 24px -12px rgba(0, 0, 0, 0.6);
-    color-scheme: dark;
-  }
+/* Light is the default; ThemeToggle sets data-theme="dark" on <html>. */
+:root[data-theme="dark"] {
+  --bg: #0c0c0e;
+  --panel: #141417;
+  --panel-2: #1b1b1f;
+  --fg: #f4f4f5;
+  --fg-2: #b4b4bb;
+  --fg-3: #7c7c85;
+  --line: #26262b;
+  --line-2: #34343a;
+  --shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 8px 24px -12px rgba(0, 0, 0, 0.6);
+  color-scheme: dark;
 }
 
 *,
